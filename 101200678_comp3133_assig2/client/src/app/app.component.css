@@ -1,0 +1,11 @@
+.div-layout{
+    display:flex;
+    justify-content: space-evenly;
+    width: 50%;
+    list-style: none;   
+   
+}
+.logout-layout{
+    display: inline-flex;
+    justify-content: flex-end;
+}

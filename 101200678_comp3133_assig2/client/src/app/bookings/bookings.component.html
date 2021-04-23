@@ -1,0 +1,25 @@
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+      <th scope="col">Booking Id</th>
+      <th scope="col">Hotel Id</th>
+      <th scope="col">Booking Date</th>
+      <th scope="col">Booking Start</th>
+      <th scope="col">Booking End</th>
+      <th scope="col">User Id</th>
+      <th scope="col">Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let booking of data; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{booking.hotel_id}}</td>
+      <td>{{booking.booking_date}}</td>
+      <td>{{booking.booking_start}}</td>
+      <td>{{booking.booking_end}}</td>
+      <td>{{booking.user_id}}</td>
+      <td><button>Cancel</button></td>
+    </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light" >
+  <div class="div-layout">
+    <ul class="div-layout">
+      <li><a routerLink="/hotels">Hotel List</a></li>
+      <li><a routerLink="/bookings">Booking List</a></li>
+      <li><a routerLink="/about">About</a></li>
+     
+      
+        <li>
+          <div *ngIf="isUserLoggedIn; else isLogOut">
+            <a routerLink="/logout">Logout</a>
+          </div>
+    
+          <ng-template #isLogOut>
+                <a routerLink="/login">Login</a>
+          </ng-template>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+  
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

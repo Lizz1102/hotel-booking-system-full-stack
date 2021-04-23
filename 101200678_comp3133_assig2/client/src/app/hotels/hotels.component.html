@@ -1,0 +1,24 @@
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+      <th scope="col">Hotel Id</th>
+      <th scope="col">Hotel Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Price</th>
+      <th scope="col">Email</th>
+      <th scope="col">Book</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let hotel of data; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{hotel.hotel_name}}</td>
+      <td>{{hotel.street}}, {{hotel.city}}, {{hotel.postal_code}}</td>
+      <td>{{hotel.price}}</td>
+      <td>{{hotel.email}}</td>
+      <td><button [routerLink]="['/bookings']" (click)="addBooking()">Book</button></td>
+      
+    </tr>
+    </tbody>
+  </table>
